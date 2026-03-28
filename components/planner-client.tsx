@@ -229,7 +229,7 @@ export function PlannerClient({ isLoggedIn, previousPlans }: PlannerClientProps)
       <section className="lg:col-span-7 space-y-8">
         <div className="flex items-center justify-between">
           <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground">
-            Tu <span className="italic text-rv-secondary-accent">Borrador de Descubrimiento</span>
+            Tu <span className="italic text-rv-secondary-accent">Plan de Viaje</span>
           </h2>
           {plan && (
             <div className="space-y-2">
