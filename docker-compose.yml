@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: rutaviva-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rutaviva
+      POSTGRES_PASSWORD: rutaviva
+      POSTGRES_DB: rutaviva
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: rutaviva-app
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://rutaviva:rutaviva@postgres:5432/rutaviva?schema=public
+      AUTH_SECRET: ${AUTH_SECRET}
+      NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:
