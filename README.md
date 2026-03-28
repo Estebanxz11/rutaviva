@@ -1,8 +1,8 @@
 # RutaViva ??
 
-> Descubre, planea y gamifica tus aventuras en Medellín y Colombia.
+> Descubre, planea y gamifica tus aventuras en el mundo.
 
-RutaViva es una aplicación web de descubrimiento de lugares gamificada, construida para la **CubePath Hackathon 2026**. Los usuarios pueden explorar destinos, marcar lugares como deseados o visitados, ganar insignias y generar itinerarios de viaje personalizados con IA.
+RutaViva es una aplicaciÃ³n web de descubrimiento de lugares gamificada, construida para la **CubePath Hackathon 2026**. Los usuarios pueden explorar destinos, marcar lugares como deseados o visitados, ganar insignias y generar itinerarios de viaje personalizados con IA.
 
 ---
 
@@ -12,27 +12,27 @@ RutaViva es una aplicación web de descubrimiento de lugares gamificada, construi
 
 ---
 
-## Características
+## CaracterÃ­sticas
 
-- **Exploración de lugares** — Navega por 18+ destinos reales en Medellín con filtros por categoría
-- **Autenticación** — Registro e inicio de sesión con credenciales (email + contraseña con bcrypt)
-- **Gamificación** — Sistema de insignias: Explorador, Aventurero, Gurmet, Viajero Elite
-- **Lista de deseos y visitados** — Marca lugares para visitar o como ya visitados
-- **Planificador IA** — Genera itinerarios personalizados con OpenAI gpt-4o-mini
-- **Historial de planes** — Guarda y revisa tus planes de viaje anteriores
+- **ExploraciÃ³n de lugares** â€” Navega por 18+ destinos reales en MedellÃ­n con filtros por categorÃ­a
+- **AutenticaciÃ³n** â€” Registro e inicio de sesiÃ³n con credenciales (email + contraseÃ±a con bcrypt)
+- **GamificaciÃ³n** â€” Sistema de insignias: Explorador, Aventurero, Gurmet, Viajero Elite
+- **Lista de deseos y visitados** â€” Marca lugares para visitar o como ya visitados
+- **Planificador IA** â€” Genera itinerarios personalizados con OpenAI gpt-4o-mini
+- **Historial de planes** â€” Guarda y revisa tus planes de viaje anteriores
 
 ---
 
-## Stack Tecnológico
+## Stack TecnolÃ³gico
 
-| Capa | Tecnología |
+| Capa | TecnologÃ­a |
 |------|------------|
 | Framework | Next.js 16 (App Router) |
 | Lenguaje | TypeScript |
 | Estilos | Tailwind CSS v4 + shadcn/ui |
 | Base de datos | PostgreSQL 16 |
 | ORM | Prisma 5 |
-| Autenticación | Auth.js v5 (Credentials) |
+| AutenticaciÃ³n | Auth.js v5 (Credentials) |
 | IA | OpenAI gpt-4o-mini |
 | Despliegue | Dokploy (Docker) |
 
@@ -40,17 +40,17 @@ RutaViva es una aplicación web de descubrimiento de lugares gamificada, construi
 
 ## Uso de CubePath
 
-Esta aplicación fue desplegada utilizando la infraestructura de **CubePath** a través de Dokploy:
+Esta aplicaciÃ³n fue desplegada utilizando la infraestructura de **CubePath** a travÃ©s de Dokploy:
 
 1. Repositorio conectado a CubePath via Git
-2. Build automático con el `Dockerfile` incluido
+2. Build automÃ¡tico con el `Dockerfile` incluido
 3. Variables de entorno configuradas en el panel de Dokploy
 4. Base de datos PostgreSQL provisionada como servicio separado
 5. Migraciones ejecutadas con `npx prisma migrate deploy` en el contenedor
 
 ---
 
-## Instalación Local
+## InstalaciÃ³n Local
 
 ### Prerrequisitos
 
@@ -103,9 +103,9 @@ OPENAI_API_KEY="sk-..."
 
 ```bash
 npm run dev          # Servidor de desarrollo
-npm run build        # Build de producción
+npm run build        # Build de producciÃ³n
 npm run db:migrate   # Crea y aplica migraciones
-npm run db:push      # Sincroniza schema sin migración
+npm run db:push      # Sincroniza schema sin migraciÃ³n
 npm run db:seed      # Pobla la BD con datos de ejemplo
 npm run db:studio    # Abre Prisma Studio
 ```
@@ -118,7 +118,7 @@ npm run db:studio    # Abre Prisma Studio
 # Build y levanta todo el stack
 docker compose up --build -d
 
-# Ejecutar migraciones en producción
+# Ejecutar migraciones en producciÃ³n
 docker compose exec app npx prisma migrate deploy
 
 # Poblar datos iniciales
@@ -130,17 +130,17 @@ docker compose exec app npm run db:seed
 ## Estructura del Proyecto
 
 ```
-+-- app/                    # Páginas (App Router)
-¦   +-- page.tsx            # Home
-¦   +-- explore/            # Explorador de lugares
-¦   +-- places/[slug]/      # Detalle de lugar
-¦   +-- my-places/          # Places del usuario + insignias
-¦   +-- planner/            # Planificador IA
-¦   +-- sign-in/            # Inicio de sesión
-¦   +-- sign-up/            # Registro
++-- app/                    # PÃ¡ginas (App Router)
+Â¦   +-- page.tsx            # Home
+Â¦   +-- explore/            # Explorador de lugares
+Â¦   +-- places/[slug]/      # Detalle de lugar
+Â¦   +-- my-places/          # Places del usuario + insignias
+Â¦   +-- planner/            # Planificador IA
+Â¦   +-- sign-in/            # Inicio de sesiÃ³n
+Â¦   +-- sign-up/            # Registro
 +-- actions/                # Server Actions
 +-- components/             # Componentes React
-¦   +-- ui/                 # shadcn/ui components
+Â¦   +-- ui/                 # shadcn/ui components
 +-- lib/                    # Utilidades (auth, db, constants)
 +-- prisma/                 # Schema y seed
 +-- types/                  # TypeScript types
@@ -150,8 +150,8 @@ docker compose exec app npm run db:seed
 
 ## Equipo
 
-- **Esteban** — Desarrollador Full Stack
+- **Esteban** â€” Desarrollador Full Stack
 
 ---
 
-*Construido con corazón para la CubePath Hackathon 2026*
+*Construido con corazÃ³n para la CubePath Hackathon 2026*
